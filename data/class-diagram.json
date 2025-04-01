@@ -1,0 +1,991 @@
+{
+  "type": "class",
+  "classes": [
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.models.Student",
+          "domId":"",
+          "name": "Student",
+          "package": "com.university.models",
+          "style": "",         
+          "generatedContent": "",
+          "files": [],
+          "isAbstract": false,
+          "isInterface": false,
+          "properties": [
+              {
+                  "name": "studentId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "name",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "email",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "dateOfBirth",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "address",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "phoneNumber",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getStudentId",
+                  "returnType": "int",
+                  "annotations": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false,
+                  "parameters": []
+
+              },
+              {
+                  "name": "enrollCourse",
+                  "returnType": "void",
+                  "annotations": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false,
+                  "parameters": [
+                      {
+                          "name": "courseId",
+                          "dataType": "int",
+                          "annotations": []
+                      },
+                      {
+                          "name": "termId",
+                          "dataType": "int",
+                          "annotations": []
+                      }
+                  ]
+              },
+              {
+                  "name": "updateProfile",
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "annotations": [],
+                          "name": "newEmail",
+                          "dataType": "string"
+                      },
+                      {
+                          "annotations": [],
+                          "name": "newPhoneNumber",
+                          "dataType": "string"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "viewGrades",
+                  "returnType": "string",
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ]
+          
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.models.Course",
+          "domId":"",
+          "name": "Course",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.models",
+          "properties": [
+              {
+                  "name": "courseId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "courseName",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "credits",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "description",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "prerequisites",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getCourseId",
+                  "returnType": "int",
+                  "parameters": [],
+                  "annotations": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "getCredits",
+                  "returnType": "int",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "addPrerequisite",
+                  "annotations": [],
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "name": "courseId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "getCourseDescription",
+                  "returnType": "string",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false,
+          "summary": "This class represents a course in the university system. It contains information about the course such as the course name, credits, description, and prerequisites. It also provides methods to get the course ID, credits, add prerequisites, and get the course description."
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.models.Professor",
+          "domId":"",
+          "name": "Professor",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.models",
+          "properties": [
+              {
+                  "annotations": [],
+                  "name": "professorId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "name",
+                  "annotations": [],
+                  "dataType": "string",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "department",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "email",
+                  "annotations": [],
+                  "dataType": "string",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "phoneNumber",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getProfessorId",
+                  "returnType": "int",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "assignCourse",
+                  "annotations": [],
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "annotations": [],
+                          "name": "courseId",
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "gradeStudent",
+                  "annotations": [],
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "annotations": [],
+                          "name": "studentId",
+                          "dataType": "int"
+                      },
+                      {
+                          "annotations": [],
+                          "name": "courseId",
+                          "dataType": "int"
+                      },
+                      {
+                          "annotations": [],
+                          "name": "grade",
+                          "dataType": "string"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "getTeachingSchedule",
+                  "returnType": "string",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false,
+          "summary": "This class represents a professor in the university system. It contains information about the professor such as the professor name, department, email, and phone number. It also provides methods to get the professor ID, assign a course, grade a student, and get the teaching schedule."
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.models.Enrollment",
+          "domId":"",
+          "name": "Enrollment",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.models",
+          "properties": [
+              {
+                  "annotations": [],
+                  "name": "enrollmentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "annotations": [],
+                  "name": "studentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "annotations": [],
+                  "name": "courseId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getEnrollmentId",
+                  "returnType": "int",
+                  "parameters": [],
+                  "visibility": "public",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "dropCourse",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "courseId",
+                          "dataType": "int",
+                          "annotations": []
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.models.Department",
+          "domId":"",
+          "name": "Department",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.models",
+          "properties": [
+              {
+                  "name": "departmentId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "name",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getDepartmentId",
+                  "returnType": "int",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.users.Admin",
+          "domId":"",
+          "name": "Admin",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.users",
+          "properties": [
+              {
+                  "name": "adminId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "name",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "manageUsers",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.services.LibrarySystem",
+          "domId":"",
+          "name": "LibrarySystem",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.services",
+          "properties": [
+              {
+                  "name": "libraryId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "bookCount",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "booksAvailable",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "checkoutBook",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "bookId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "returnBook",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "bookId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "checkAvailability",
+                  "returnType": "boolean",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "bookId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.academics.Grade",
+          "domId":"",
+          "name": "Grade",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.academics",
+          "properties": [
+              {
+                  "name": "gradeId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "studentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "courseId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "grade",
+                  "dataType": "string",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "getGrade",
+                  "returnType": "string",
+                  "annotations": [],
+                  "parameters": [],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.utils.NotificationService",
+          "domId":"",
+          "name": "NotificationService",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.utils",
+          "properties": [
+              {
+                  "name": "notificationId",
+                  "annotations": [],
+                  "dataType": "int",
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              }
+          ],
+          "methods": [
+              {
+                  "name": "sendNotification",
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "name": "message",
+                          "annotations": [],
+                          "dataType": "string"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.users.StudentAffairs",
+          "domId":"",
+          "name": "StudentAffairs",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.users",
+          "properties": [
+              {
+                  "name": "affairsId",
+                  "dataType": "int",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "studentServices",
+                  "dataType": "string",
+                  "annotations": [],
+                  "visibility": "private",
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "assistStudent",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "studentId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.services.ExamSystem",
+          "domId":"",
+          "name": "ExamSystem",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.services",
+          "properties": [
+              {
+                  "name": "examId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "examDate",
+                  "dataType": "string",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "scheduleExam",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "courseId",
+                          "annotations": [],
+                          "dataType": "int"
+                      },
+                      {
+                          "name": "date",
+                          "annotations": [],
+                          "dataType": "string"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.finance.TuitionPayment",
+          "domId":"",
+          "name": "TuitionPayment",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.finance",
+          "properties": [
+              {
+                  "name": "paymentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "amount",
+                  "dataType": "double",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "studentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "processPayment",
+                  "annotations": [],
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "name": "amount",
+                          "annotations": [],
+                          "dataType": "double"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      },
+      {
+          "type": "class",
+          "annotations": ["@Entity"],
+          "id": "com.university.academics.Transcript",
+          "domId":"",
+          "name": "Transcript",
+          "files": [],
+          "generatedContent":"",
+          "package": "com.university.academics",
+          "properties": [
+              {
+                  "name": "transcriptId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": true
+              },
+              {
+                  "name": "studentId",
+                  "dataType": "int",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              },
+              {
+                  "name": "courseGrades",
+                  "dataType": "string",
+                  "visibility": "private",
+                  "annotations": [],
+                  "isStatic": false,
+                  "isFinal": false
+              }
+          ],
+          "methods": [
+              {
+                  "name": "generateTranscript",
+                  "returnType": "void",
+                  "annotations": [],
+                  "parameters": [
+                      {
+                          "name": "studentId",
+                          "annotations": [],
+                          "dataType": "int"
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              },
+              {
+                  "name": "printTranscript",
+                  "annotations": [],
+                  "returnType": "void",
+                  "parameters": [
+                      {
+                          "annotations": [],
+                          "name": "format",
+                          "dataType": "string"
+
+                      }
+                  ],
+                  "visibility": "public",
+                  "isStatic": false,
+                  "isAbstract": false
+              }
+          ],
+          "isAbstract": false,
+          "isInterface": false
+      }
+  ],
+  "relationships": [
+      {
+          "id": "1",
+          "domId":"",
+          "name": "has",
+          "source": "com.university.models.Student",
+          "target": "com.university.models.Enrollment",
+          "type": "composition"
+      },
+      {
+          "id": "2",
+          "domId":"",
+          "name": "offered",
+          "source": "com.university.models.Course",
+          "target": "com.university.models.Enrollment",
+          "type": "composition"
+      },
+      {
+          "id": "3",
+          "domId":"",
+          "name": "teaches",
+          "source": "com.university.models.Professor",
+          "target": "com.university.models.Course",
+          "type": "composition"
+      },
+      {
+          "id": "4",
+          "domId":"",
+          "name": "belongs to",
+          "source": "com.university.models.Professor",
+          "target": "com.university.models.Department",
+          "type": "association"
+      },
+      {
+          "id": "5",
+          "domId":"",
+          "name": "handles",
+          "source": "com.university.services.LibrarySystem",
+          "target": "com.university.users.Librarian",
+          "type": "association"
+      },
+      {
+          "id": "6",
+          "domId":"",
+          "name": "issues",
+          "source": "com.university.academics.Grade",
+          "target": "com.university.models.Student",
+          "type": "association"
+      },
+      {
+          "id": "7",
+          "domId":"",
+          "name": "notifies",
+          "source": "com.university.utils.NotificationService",
+          "target": "com.university.users.Admin",
+          "type": "association"
+      },
+      {
+          "id": "8",
+          "domId":"",
+          "name": "manages",
+          "source": "com.university.users.StudentAffairs",
+          "target": "com.university.models.Student",
+          "type": "association"
+      },
+      {
+          "id": "9",
+          "domId":"",
+          "name": "handles",
+          "source": "com.university.services.ExamSystem",
+          "target": "com.university.academics.Grade",
+          "type": "association"
+      },
+      {
+          "id": "10",
+          "domId":"",
+          "name": "pays",
+          "source": "com.university.finance.TuitionPayment",
+          "target": "com.university.models.Student",
+          "type": "association"
+      },
+      {
+          "id": "11",
+          "domId":"",
+          "name": "maintains",
+          "source": "com.university.academics.Transcript",
+          "target": "com.university.models.Student",
+          "type": "association"
+      },
+      {
+          "id": "12",
+          "domId":"",
+          "name": "requires",
+          "source": "com.university.models.Course",
+          "target": "com.university.academics.Exam",
+          "type": "association"
+      }
+  ]
+}

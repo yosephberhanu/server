@@ -1,0 +1,239 @@
+{
+  "type": "package",
+  "id": "com.university",
+  "name": "university",
+  "packages": [
+    {
+      "type": "package",
+      "annotation": "@Entity",
+      "id": "com.university.models",
+      "name": "models",
+      "package": "com.university",
+      "subpackages": [
+        {
+          "type": "package",
+          "annotation": "@Entity",
+          "id": "com.university.models.academics",
+          "name": "academics",
+          "package": "com.university.models",
+          "classes": [
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.academics.Course",
+              "name": "Course",
+              "package": "com.university.models.academics"
+            },
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.academics.Grade",
+              "name": "Grade",
+              "package": "com.university.models.academics"
+            },
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.academics.Enrollment",
+              "name": "Enrollment",
+              "package": "com.university.models.academics"
+            },
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.academics.Exam",
+              "name": "Exam",
+              "package": "com.university.models.academics"
+            }
+          ]
+        },
+        {
+          "type": "package",
+          "annotation": "@Entity",
+          "id": "com.university.models.users",
+          "name": "users",
+          "package": "com.university.models",
+          "classes": [
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.users.Student",
+              "name": "Student",
+              "package": "com.university.models.users"
+            },
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.users.Professor",
+              "name": "Professor",
+              "package": "com.university.models.users"
+            },
+            {
+              "type": "class",
+              "annotation": "@Entity",
+              "id": "com.university.models.users.Admin",
+              "name": "Admin",
+              "package": "com.university.models.users"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "package",
+      "annotation": "@Service",
+      "id": "com.university.services",
+      "name": "services",
+      "package": "com.university",
+      "classes": [
+        {
+          "type": "class",
+          "annotation": "@Service",
+          "id": "com.university.services.StudentService",
+          "name": "StudentService",
+          "package": "com.university.services"
+        },
+        {
+          "type": "class",
+          "annotation": "@Service",
+          "id": "com.university.services.ProfessorService",
+          "name": "ProfessorService",
+          "package": "com.university.services"
+        },
+        {
+          "type": "class",
+          "annotation": "@Service",
+          "id": "com.university.services.CourseService",
+          "name": "CourseService",
+          "package": "com.university.services"
+        }
+      ]
+    },
+    {
+      "type": "package",
+      "annotation": "@Repository",
+      "id": "com.university.repositories",
+      "name": "repositories",
+      "package": "com.university",
+      "classes": [
+        {
+          "type": "class",
+          "annotation": "@Repository",
+          "id": "com.university.repositories.StudentRepository",
+          "name": "StudentRepository",
+          "package": "com.university.repositories"
+        },
+        {
+          "type": "class",
+          "annotation": "@Repository",
+          "id": "com.university.repositories.ProfessorRepository",
+          "name": "ProfessorRepository",
+          "package": "com.university.repositories"
+        },
+        {
+          "type": "class",
+          "annotation": "@Repository",
+          "id": "com.university.repositories.CourseRepository",
+          "name": "CourseRepository",
+          "package": "com.university.repositories"
+        }
+      ]
+    },
+    {
+      "type": "package",
+      "annotation": "@Controller",
+      "id": "com.university.controllers",
+      "name": "controllers",
+      "package": "com.university",
+      "classes": [
+        {
+          "type": "class",
+          "annotation": "@RestController",
+          "id": "com.university.controllers.StudentController",
+          "name": "StudentController",
+          "package": "com.university.controllers"
+        },
+        {
+          "type": "class",
+          "annotation": "@RestController",
+          "id": "com.university.controllers.ProfessorController",
+          "name": "ProfessorController",
+          "package": "com.university.controllers"
+        },
+        {
+          "type": "class",
+          "annotation": "@RestController",
+          "id": "com.university.controllers.CourseController",
+          "name": "CourseController",
+          "package": "com.university.controllers"
+        }
+      ]
+    },
+    {
+      "type": "package",
+      "annotation": "@Utility",
+      "id": "com.university.utils",
+      "name": "utils",
+      "package": "com.university",
+      "classes": [
+        {
+          "type": "class",
+          "annotation": "@Component",
+          "id": "com.university.utils.NotificationService",
+          "name": "NotificationService",
+          "package": "com.university.utils"
+        },
+        {
+          "type": "class",
+          "annotation": "@Component",
+          "id": "com.university.utils.LoggingService",
+          "name": "LoggingService",
+          "package": "com.university.utils"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+      {
+          "id": "1",
+          "label": "uses",
+          "source": "com.university.models",
+          "target": "com.university.repositories",
+          "type": "composition"
+
+      },
+      {
+          "id": "2",
+          "label": "offered",
+          "source": "com.university.utils",
+          "target": "com.university.repositories",
+          "type": "composition"
+      },
+      {
+          "id": "3",
+          "label": "teaches",
+          "source": "com.university.services",
+          "target": "com.university.utils",
+          "type": "composition"
+      },
+      {
+          "id": "4",
+          "source": "com.university.models",
+          "target": "com.university.controllers"
+      },
+      {
+          "id": "5",
+          "label": "handles",
+          "source": "com.university.services",
+          "target": "com.university.controllers",
+          "type": "association"
+      },
+      {
+          "id": "6",
+          "label": "issues",
+          "source": "com.university.services",
+          "target": "com.university.models",
+          "type": "association"
+      }
+  ]
+}

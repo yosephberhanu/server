@@ -1,0 +1,17 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+      "test": "./test.py:graph"
+    },
+    "env": "./.env",
+    "python_version": "3.11",
+    "dependencies": [
+      "langchain",
+      "sqlalchemy",
+      "python-dotenv",
+      "langchain-community",
+      "langchain-groq",
+      "langchain-ollama",
+      "langgraph"
+    ]
+  }
